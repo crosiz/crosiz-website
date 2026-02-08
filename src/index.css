@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+
+/* Crosiz Premium Design System - Futuristic Dark Theme */
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 190 95% 50%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 270 60% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 190 95% 50%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 190 95% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Crosiz tokens */
+    --neon-cyan: 190 95% 50%;
+    --neon-purple: 270 60% 60%;
+    --neon-blue: 220 90% 60%;
+    --deep-navy: 222 47% 6%;
+    --glass-bg: 222 47% 11%;
+    --glass-border: 222 30% 25%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(190, 95%, 50%) 0%, hsl(270, 60%, 60%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(190, 95%, 50%, 0.15) 0%, transparent 70%);
+    --gradient-card: linear-gradient(180deg, hsl(222, 47%, 12%) 0%, hsl(222, 47%, 8%) 100%);
+    
+    /* Shadows */
+    --shadow-glow-cyan: 0 0 40px hsl(190, 95%, 50%, 0.3);
+    --shadow-glow-purple: 0 0 40px hsl(270, 60%, 60%, 0.3);
+    --shadow-glass: 0 8px 32px hsl(222, 47%, 0%, 0.4);
+    
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 190 95% 50%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 190 95% 50%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 98%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 190 95% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 40% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 190 95% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 190 95% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl border border-glass-border;
+    background: linear-gradient(180deg, hsl(222, 47%, 12%, 0.8) 0%, hsl(222, 47%, 8%, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-500;
+  }
+
+  .glass-card-hover:hover {
+    border-color: hsl(190, 95%, 50%, 0.4);
+    box-shadow: var(--shadow-glow-cyan);
+    transform: translateY(-4px);
+  }
+
+  /* Neon text */
+  .neon-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow button */
+  .glow-button {
+    @apply relative overflow-hidden rounded-xl px-8 py-4 font-semibold transition-all duration-300;
+    background: var(--gradient-primary);
+    color: hsl(222, 47%, 6%);
+  }
+
+  .glow-button:hover {
+    box-shadow: var(--shadow-glow-cyan);
+    transform: translateY(-2px);
+  }
+
+  .glow-button::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(190, 95%, 60%) 0%, hsl(270, 60%, 70%) 100%);
+  }
+
+  .glow-button:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Outline glow button */
+  .glow-button-outline {
+    @apply relative overflow-hidden rounded-xl px-8 py-4 font-semibold transition-all duration-300;
+    background: transparent;
+    border: 1px solid hsl(190, 95%, 50%, 0.5);
+    color: hsl(190, 95%, 50%);
+  }
+
+  .glow-button-outline:hover {
+    border-color: hsl(190, 95%, 50%);
+    box-shadow: var(--shadow-glow-cyan);
+    background: hsl(190, 95%, 50%, 0.1);
+  }
+
+  /* Animated gradient background */
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(222, 47%, 6%) 0%, hsl(222, 47%, 10%) 50%, hsl(222, 47%, 6%) 100%);
+  }
+
+  /* Floating orbs */
+  .orb {
+    @apply absolute rounded-full blur-3xl opacity-30;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .orb-cyan {
+    background: hsl(190, 95%, 50%);
+  }
+
+  .orb-purple {
+    background: hsl(270, 60%, 60%);
+  }
+
+  /* Grid pattern overlay */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(222, 30%, 18%, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(222, 30%, 18%, 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  /* Container */
+  .container-wide {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
