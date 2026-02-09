@@ -9,6 +9,7 @@ interface SEOProps {
 }
 
 export const SEO = ({ title, description, url, image }: SEOProps) => (
+  
   <Helmet>
     <title>{title}</title>
     <meta name="description" content={description} />

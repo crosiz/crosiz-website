@@ -1,13 +1,51 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crosiz</title>
+
+    <!-- Default Title & Description -->
+    <!-- Helmet will override these per page -->
+    <title>Crosiz - AI Solutions to Help Businesses Scale</title>
+    <meta name="description" content="Crosiz helps businesses scale by integrating AI-powered intelligent systems to optimize operations and drive growth.">
+    <meta name="keywords" content="AI, intelligent systems, business growth, AI solutions, automation, technology">
+
+    <!-- Open Graph Default -->
+    <meta property="og:title" content="Crosiz - AI Solutions to Help Businesses Scale">
+    <meta property="og:description" content="Crosiz helps businesses scale by integrating AI-powered intelligent systems to optimize operations and drive growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.crosiz.com/">
+    <!-- <meta property="og:image" content="/images/crosiz-og-image.jpg"> -->
+
+    <!-- Twitter Card Default -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crosiz - AI Solutions to Help Businesses Scale">
+    <meta name="twitter:description" content="Crosiz helps businesses scale by integrating AI-powered intelligent systems to optimize operations and drive growth.">
+    <meta name="twitter:image" content="/images/crosiz-og-image.jpg">
+
+    <!-- Structured Data (Organization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Crosiz",
+      "url": "https://www.crosiz.com",
+      "logo": "https://www.crosiz.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/crosiz",
+        "https://www.linkedin.com/company/crosiz",
+        "https://twitter.com/crosiz"
+      ]
+    }
+    </script>
+
   </head>
   <body>
+    <!-- React root -->
     <div id="root"></div>
+
+    <!-- React entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
