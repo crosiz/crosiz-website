@@ -100,8 +100,7 @@ const Industries = () => {
             transition={{ delay: 0.1 }}
             className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6"
           >
-            Solutions for{" "}
-            <span className="neon-text">Every Industry</span>
+            Solutions for <span className="neon-text">Every Industry</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -145,8 +144,9 @@ const Industries = () => {
                 <Link
                   to="/inquiry"
                   className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+                  aria-label={`Learn more about ${industry.title} solutions`}
                 >
-                  Learn More <ArrowRight size={16} />
+                  Learn More About {industry.title} <ArrowRight size={16} />
                 </Link>
               </GlassCard>
             ))}
@@ -180,7 +180,7 @@ const Industries = () => {
           />
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
+            {[ 
               {
                 title: "Pattern Recognition",
                 description: "We identify successful patterns across industries and adapt them to your unique context.",

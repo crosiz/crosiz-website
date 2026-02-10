@@ -127,6 +127,7 @@ const Services = () => {
         url="https://crosiz.com/services"
         image="https://crosiz.com/assets/logo.png"
       />
+
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />
@@ -148,9 +149,7 @@ const Services = () => {
             transition={{ delay: 0.1 }}
             className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6"
           >
-            End-to-End{" "}
-            <span className="neon-text">AI & Software</span>{" "}
-            Solutions
+            End-to-End <span className="neon-text">AI & Software</span> Solutions
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -175,9 +174,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
             >
               {/* Content */}
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
@@ -224,9 +221,10 @@ const Services = () => {
 
                 <Link
                   to="/inquiry"
+                  aria-label={`Get started with ${service.title}`}
                   className="glow-button inline-flex items-center gap-2"
                 >
-                  Get Started
+                  Get Started with {service.title}
                   <ArrowRight size={18} />
                 </Link>
               </div>
@@ -271,7 +269,6 @@ const Services = () => {
                 transition={{ delay: index * 0.1 }}
                 className="relative"
               >
-                {/* Connector line */}
                 {index < processSteps.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-primary to-transparent z-0" />
                 )}
@@ -309,6 +306,7 @@ const Services = () => {
             </p>
             <Link
               to="/inquiry"
+              aria-label="Start your project with Crosiz services"
               className="glow-button inline-flex items-center gap-2 relative z-10"
             >
               Start Your Project

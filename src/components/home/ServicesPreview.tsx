@@ -59,25 +59,31 @@ export const ServicesPreview = () => {
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <GlassCard key={service.title} delay={index * 0.1}>
-              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6`}>
-                <service.icon className={`w-7 h-7 ${service.color}`} />
-              </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                {service.description}
-              </p>
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-primary text-sm font-medium hover:gap-3 transition-all"
-              >
-                Learn More <ArrowRight size={16} />
-              </Link>
-            </GlassCard>
-          ))}
+          {services.map((service, index) => {
+            // Generate unique anchor for each service for descriptive links
+            const linkId = service.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+
+            return (
+              <GlassCard key={service.title} delay={index * 0.1}>
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6`}>
+                  <service.icon className={`w-7 h-7 ${service.color}`} />
+                </div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <Link
+                  to={`/services#${linkId}`}
+                  className="inline-flex items-center gap-2 text-primary text-sm font-medium hover:gap-3 transition-all"
+                  aria-label={`Learn more about ${service.title}`}
+                >
+                  Learn More About {service.title} <ArrowRight size={16} />
+                </Link>
+              </GlassCard>
+            );
+          })}
 
           {/* CTA Card */}
           <GlassCard delay={0.5} className="flex flex-col justify-center items-center text-center bg-gradient-to-br from-primary/10 to-secondary/10">
