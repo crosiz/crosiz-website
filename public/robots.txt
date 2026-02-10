@@ -1,0 +1,6 @@
+# Allow all search engines to crawl the website
+User-agent: *
+Allow: /
+
+# Specify sitemap location
+Sitemap: https://crosiz.com/sitemap.xml

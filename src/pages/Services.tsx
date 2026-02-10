@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { SEO } from "@/components/ui/SEO";
+
 import { 
   Brain, 
   Code2, 
@@ -118,6 +120,13 @@ const processSteps = [
 const Services = () => {
   return (
     <Layout>
+      {/* SEO Metadata */}
+      <SEO
+        title="Crosiz Services | AI, Software & Automation Solutions"
+        description="Explore Crosiz's end-to-end services, including AI strategy, custom software development, business process automation, AI integration, and SaaS engineering. Transform your business with our expert solutions."
+        url="https://crosiz.com/services"
+        image="https://crosiz.com/assets/logo.png"
+      />
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />

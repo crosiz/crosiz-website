@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { SEO } from "@/components/ui/SEO";
 import { 
   User, 
   Building2, 
@@ -133,6 +134,13 @@ const Inquiry = () => {
 
   return (
     <Layout>
+      {/* SEO Metadata */}
+        <SEO
+          title="Crosiz Inquiry | Request a Custom AI & Software Solution"
+          description="Submit your business inquiry to Crosiz. Share your challenges and requirements, and our team will craft a tailored AI or software solution."
+          url="https://crosiz.com/inquiry"
+          image="https://crosiz.com/assets/logo.png"
+        />
       {/* Hero */}
       <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />

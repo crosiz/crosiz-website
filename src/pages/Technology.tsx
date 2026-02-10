@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Zap, Lock, Server, Cloud, Brain } from "lucide-react";
+import { SEO } from "@/components/ui/SEO";
 
 const techCategories = [
   {
@@ -118,6 +119,13 @@ const capabilities = [
 const Technology = () => {
   return (
     <Layout>
+      {/* SEO Metadata */}
+      <SEO
+        title="Crosiz Technology Stack | AI, Cloud & Software Expertise"
+        description="Explore Crosiz's technology stack and capabilities. From AI & machine learning to cloud, frontend, backend, databases, security, and enterprise-grade solutions."
+        url="https://crosiz.com/technology"
+        image="https://crosiz.com/assets/logo.png"
+      />
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />

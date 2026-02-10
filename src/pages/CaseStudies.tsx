@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ArrowRight, TrendingUp, Clock, Zap } from "lucide-react";
+import { SEO } from "@/components/ui/SEO";
 
 const caseStudies = [
   {
@@ -67,6 +68,14 @@ const caseStudies = [
 const CaseStudies = () => {
   return (
     <Layout>
+      {/* SEO Metadata */}
+      <SEO
+        title="Crosiz Case Studies | Real AI & Software Success Stories"
+        description="Explore real-world case studies showcasing how Crosiz delivers measurable results through AI, automation, and custom software solutions."
+        url="https://crosiz.com/case-studies"
+        image="https://crosiz.com/assets/logo.png"
+      />
+      
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />

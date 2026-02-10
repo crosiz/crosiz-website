@@ -1,51 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic Meta -->
+    <!-- Basic -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
 
-    <!-- Default Title & Description -->
-    <!-- Helmet will override these per page -->
-    <title>Crosiz - AI Solutions to Help Businesses Scale</title>
-    <meta name="description" content="Crosiz helps businesses scale by integrating AI-powered intelligent systems to optimize operations and drive growth.">
-    <meta name="keywords" content="AI, intelligent systems, business growth, AI solutions, automation, technology">
+    <!-- Title (VERY IMPORTANT) -->
+    <title>
+      Crosiz – We Build Intelligent AI Systems to Scale Businesses
+    </title>
 
-    <!-- Open Graph Default -->
-    <meta property="og:title" content="Crosiz - AI Solutions to Help Businesses Scale">
-    <meta property="og:description" content="Crosiz helps businesses scale by integrating AI-powered intelligent systems to optimize operations and drive growth.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.crosiz.com/">
-    <!-- <meta property="og:image" content="/images/crosiz-og-image.jpg"> -->
+    <!-- Primary Meta Description -->
+    <meta
+      name="description"
+      content="Crosiz is an AI-driven software company helping businesses build intelligent systems, integrate artificial intelligence, and scale faster through modern web, data, and automation solutions."
+    />
 
-    <!-- Twitter Card Default -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Crosiz - AI Solutions to Help Businesses Scale">
-    <meta name="twitter:description" content="Crosiz helps businesses scale by integrating AI-powered intelligent systems to optimize operations and drive growth.">
-    <meta name="twitter:image" content="/images/crosiz-og-image.jpg">
+    <!-- Keywords (still useful for context) -->
+    <meta
+      name="keywords"
+      content="AI software company, AI integration services, intelligent systems, AI for business, custom AI solutions, SaaS development, machine learning solutions, Crosiz"
+    />
 
-    <!-- Structured Data (Organization) -->
+    <!-- Author -->
+    <meta name="author" content="Crosiz" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://crosiz.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./public/assets/logo.png" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Crosiz – Intelligent AI Systems for Business Growth" />
+    <meta
+      property="og:description"
+      content="We build intelligent AI-powered systems that help businesses integrate artificial intelligence and scale with confidence."
+    />
+    <meta property="og:url" content="https://crosiz.com/" />
+    <meta property="og:image" content="https://crosiz.com/og-image.png" />
+    <meta property="og:site_name" content="Crosiz" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Crosiz – AI Systems That Scale Businesses" />
+    <meta
+      name="twitter:description"
+      content="Crosiz builds intelligent AI systems to help businesses integrate AI and grow faster."
+    />
+    <meta name="twitter:image" content="https://crosiz.com/og-image.png" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Preconnect (Performance boost) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Crosiz",
-      "url": "https://www.crosiz.com",
-      "logo": "https://www.crosiz.com/images/logo.png",
-      "sameAs": [
-        "https://www.facebook.com/crosiz",
-        "https://www.linkedin.com/company/crosiz",
-        "https://twitter.com/crosiz"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Crosiz",
+        "url": "https://crosiz.com",
+        "logo": "https://crosiz.com/public/icons/logo.png",
+        "description": "Crosiz builds intelligent AI-powered systems to help businesses integrate artificial intelligence and scale.",
+        "sameAs": [
+          "https://www.linkedin.com/company/crosiz",
+          "https://twitter.com/crosiz"
+        ]
+      }
     </script>
-
   </head>
+
   <body>
-    <!-- React root -->
+    <noscript>
+      Crosiz builds intelligent AI systems to help businesses integrate artificial intelligence and scale.
+    </noscript>
+
     <div id="root"></div>
 
-    <!-- React entry -->
+    <!-- Vite Entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -14,6 +14,7 @@ import {
   ArrowRight,
   CheckCircle2
 } from "lucide-react";
+import { SEO } from "@/components/ui/SEO";
 
 const industries = [
   {
@@ -70,6 +71,14 @@ const industries = [
 const Industries = () => {
   return (
     <Layout>
+      {/* SEO Metadata */}
+      <SEO
+        title="Crosiz Industries | AI & Custom Software Solutions for Every Sector"
+        description="Discover how Crosiz delivers AI, automation, and software solutions across startups, enterprises, e-commerce, fintech, healthcare, logistics, and marketing agencies."
+        url="https://crosiz.com/industries"
+        image="https://crosiz.com/assets/logo.png"
+      />
+
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />

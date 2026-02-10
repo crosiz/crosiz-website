@@ -3,6 +3,8 @@ import { Layout } from "@/components/layout/Layout";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/ui/SEO";
+
 
 const contactInfo = [
   {
@@ -34,6 +36,13 @@ const socialLinks = [
 const Contact = () => {
   return (
     <Layout>
+      {/* SEO Metadata */}
+      <SEO
+        title="Crosiz Contact | Get in Touch with Our Team"
+        description="Reach out to Crosiz for AI, automation, and custom software solutions. Visit our Gulberg, Islamabad office or contact us via email or phone."
+        url="https://crosiz.com/contact"
+        image="https://crosiz.com/assets/logo.png"
+      />
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />

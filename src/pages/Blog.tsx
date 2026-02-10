@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
+import { SEO } from "@/components/ui/SEO";
 
 const blogPosts = [
   {
@@ -76,6 +77,13 @@ const Blog = () => {
 
   return (
     <Layout>
+      {/* SEO Metadata */}
+      <SEO
+        title="Crosiz Blog | AI, Automation & Digital Transformation Insights"
+        description="Expert insights on AI, intelligent automation, data strategy, and scalable software systems from the Crosiz team."
+        url="https://crosiz.com/blog"
+        image="https://crosiz.com/assets/logo.png"
+      />
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />

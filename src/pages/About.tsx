@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Target, Eye, Heart, Rocket, Users, Award, Globe, Zap } from "lucide-react";
+import { SEO } from "@/components/ui/SEO";
 
 const values = [
   { icon: Target, title: "Excellence", description: "We pursue excellence in every solution we deliver." },
@@ -30,6 +31,13 @@ const team = [
 const About = () => {
   return (
     <Layout>
+       {/* SEO Metadata */}
+       <SEO
+        title="About Crosiz | AI Systems & Intelligent Software Company"
+        description="Learn about Crosiz — an AI-driven software company helping businesses build intelligent systems, integrate AI, and scale globally."
+        url="https://crosiz.com/about"
+        image="https://crosiz.com/og-image.png"
+      />
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 gradient-bg" />
