@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  industry    String
+  problem     String   @db.Text
+  solution    String   @db.Text
+  architecture String  @db.Text
+  outcome     String   @db.Text
+  techStack   String[]
+  tags        String[]
+  stats       Json
+  coverImage  String
+  images      String[]
+  timeline    String
+  featured    Boolean  @default(false)
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String
+  content     String   @db.Text
+  coverImage  String
+  tags        String[]
+  published   Boolean  @default(false)
+  readTime    Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Job {
+  id          String   @id @default(cuid())
+  title       String
+  department  String
+  type        String
+  location    String
+  description String   @db.Text
+  requirements String[] 
+  open        Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ContactSubmission {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  company     String?
+  service     String
+  message     String   @db.Text
+  budget      String?
+  n8nSent     Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
