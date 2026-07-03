@@ -44,7 +44,7 @@ export function WhyCrosiz() {
       <div className="mx-auto max-w-[var(--container)] px-[var(--gutter)] flex flex-col lg:flex-row gap-16">
 
         <div className="lg:w-1/3">
-          <div className="sticky top-28">
+          <div className="relative lg:sticky lg:top-28">
             <SectionLabel>Why Crosiz</SectionLabel>
             <h2 className="text-h2 leading-tight mt-3">
               We Write Code<br />

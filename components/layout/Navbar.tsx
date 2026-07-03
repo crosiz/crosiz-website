@@ -260,7 +260,7 @@ export function Navbar() {
             </Link>
           </div>
 
-          <button className="lg:hidden text-[var(--text-1)]" onClick={() => setMobileOpen(true)} aria-label="Open menu">
+          <button className="lg:hidden text-[var(--text-1)] p-2 -mr-2" onClick={() => setMobileOpen(true)} aria-label="Open menu">
             <Menu size={28} />
           </button>
         </div>
@@ -434,7 +434,7 @@ export function Navbar() {
               <Link href="/" onClick={() => setMobileOpen(false)}>
                 <CrosizLogo />
               </Link>
-              <button className="text-[var(--text-1)]" onClick={() => setMobileOpen(false)} aria-label="Close menu">
+              <button className="text-[var(--text-1)] p-2 -mr-2" onClick={() => setMobileOpen(false)} aria-label="Close menu">
                 <X size={28} />
               </button>
             </div>

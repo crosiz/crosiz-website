@@ -51,7 +51,7 @@ export function ServicesGrid() {
             <Link key={service.num} href={`/services/${service.slug}`} className="group min-w-0">
               <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-[8px] p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-hover)] flex flex-col min-w-0 overflow-hidden">
                 <div className="flex justify-between items-start mb-6">
-                  <span className="font-display text-4xl font-bold text-[var(--border)] group-hover:text-[var(--accent-glow)] transition-colors">
+                  <span className="font-display text-4xl font-bold text-[var(--text-3)] group-hover:text-[var(--accent-glow)] transition-colors">
                     {service.num}
                   </span>
                   <div className="w-10 h-10 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--text-2)] group-hover:bg-[var(--accent)] group-hover:text-black group-hover:border-[var(--accent)] transition-all shrink-0">

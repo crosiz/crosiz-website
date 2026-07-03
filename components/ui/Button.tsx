@@ -13,7 +13,7 @@ export function cn(...inputs: (string | undefined | null | false)[]) {
 }
 
 export function Button({ variant = 'primary', size = 'default', className, children, ...props }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center rounded-[4px] font-medium transition-colors duration-300';
+  const baseStyles = 'inline-flex items-center justify-center rounded-[4px] font-medium transition-colors duration-300 min-h-[44px] min-w-[44px]';
   
   const variants = {
     primary: 'bg-[var(--accent)] text-[var(--text-inv)] hover:bg-[var(--accent-2)]',

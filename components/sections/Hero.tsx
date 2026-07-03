@@ -74,7 +74,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: 'easeOut' }}
+            transition={{ duration: 0.9, delay: 0.1, ease: 'easeOut' }}
             className="relative hidden lg:block"
           >
 
@@ -83,7 +83,7 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               className="absolute -left-14 top-16 z-20 bg-[var(--bg-2)] border border-[var(--border)] px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3"
             >
               <div className="w-8 h-8 rounded-lg bg-[rgba(0,210,106,0.12)] flex items-center justify-center text-[var(--green)] text-sm font-bold">↑</div>
@@ -97,7 +97,7 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.9, duration: 0.5 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
               className="absolute -right-10 bottom-10 z-20 bg-[var(--bg-2)] border border-[var(--border)] px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3"
             >
               <div className="w-8 h-8 rounded-lg bg-[rgba(0,229,255,0.1)] flex items-center justify-center text-[var(--accent)] text-sm font-bold">↓</div>
@@ -111,7 +111,7 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.1, duration: 0.5 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
               className="absolute -right-8 top-32 z-20 bg-[var(--bg-2)] border border-[var(--border)] px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3"
             >
               <div className="w-8 h-8 rounded-lg bg-[rgba(255,184,0,0.12)] flex items-center justify-center text-[var(--text-1)] text-sm font-bold">★</div>

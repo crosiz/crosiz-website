@@ -106,7 +106,7 @@ export function Footer() {
                 { label: 'Contact', href: '/contact' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[var(--text-2)] hover:text-[var(--accent)] transition-colors">
+                  <Link href={link.href} className="text-sm text-[var(--text-2)] hover:text-[var(--accent)] transition-colors py-1.5 inline-block">
                     {link.label}
                   </Link>
                 </li>
@@ -127,7 +127,7 @@ export function Footer() {
                 { label: 'All Services', href: '/services' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[var(--text-2)] hover:text-[var(--accent)] transition-colors">
+                  <Link href={link.href} className="text-sm text-[var(--text-2)] hover:text-[var(--accent)] transition-colors py-1.5 inline-block">
                     {link.label}
                   </Link>
                 </li>
@@ -147,7 +147,7 @@ export function Footer() {
                 { label: 'Technologies', href: '/technologies' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[var(--text-2)] hover:text-[var(--accent)] transition-colors">
+                  <Link href={link.href} className="text-sm text-[var(--text-2)] hover:text-[var(--accent)] transition-colors py-1.5 inline-block">
                     {link.label}
                   </Link>
                 </li>
@@ -158,13 +158,13 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[var(--border)] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[var(--text-3)]">
+          <p className="text-sm text-[var(--text-2)]">
             © {new Date().getFullYear()} Crosiz Technologies. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-xs text-[var(--text-3)]">
-            <Link href="/privacy" className="hover:text-[var(--text-1)] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[var(--text-1)] transition-colors">Terms of Service</Link>
-            <Link href="/sitemap" className="hover:text-[var(--text-1)] transition-colors">Sitemap</Link>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm text-[var(--text-2)]">
+            <Link href="/privacy" className="hover:text-[var(--text-1)] transition-colors py-2 px-1">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[var(--text-1)] transition-colors py-2 px-1">Terms of Service</Link>
+            <Link href="/sitemap" className="hover:text-[var(--text-1)] transition-colors py-2 px-1">Sitemap</Link>
           </div>
         </div>
       </div>

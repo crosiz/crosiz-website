@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://crosiz.com"),
   title: {
-    default: "Crosiz — AI Systems & Software Development Agency",
+    default: "Crosiz | AI Systems & Software Development Agency",
     template: "%s | Crosiz",
   },
   description:
