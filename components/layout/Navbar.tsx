@@ -76,43 +76,43 @@ function ThemeToggle() {
 
 // ── Nav data ───────────────────────────────────────────────────────────────────
 const SERVICES_BUILD = [
-  { name: 'Web Applications',      href: '/services/web-development',      desc: 'Next.js, React, TypeScript' },
-  { name: 'AI & Automation',       href: '/services/ai-automation',         desc: 'n8n, OpenAI, LangChain' },
-  { name: 'Backend Systems',       href: '/services/backend-development',   desc: 'Node.js, NestJS, FastAPI' },
-  { name: 'System Design',         href: '/services/system-design',         desc: 'Architecture & scalability' },
-  { name: 'DevOps & Infrastructure', href: '/services/devops',              desc: 'Docker, K8s, CI/CD' },
+  { name: 'Web Applications', href: '/services/web-development', desc: 'Next.js, React, TypeScript' },
+  { name: 'AI & Automation', href: '/services/ai-automation', desc: 'n8n, OpenAI, LangChain' },
+  { name: 'Backend Systems', href: '/services/backend-development', desc: 'Node.js, NestJS, FastAPI' },
+  { name: 'System Design', href: '/services/system-design', desc: 'Architecture & scalability' },
+  { name: 'DevOps & Infrastructure', href: '/services/devops', desc: 'Docker, K8s, CI/CD' },
 ];
 
 const SERVICES_SPECIALIZED = [
-  { name: 'Mobile Apps',        href: '/services/mobile-app-development', desc: 'React Native, Expo' },
-  { name: 'API Development',    href: '/services/api-development',         desc: 'REST, GraphQL, Webhooks' },
-  { name: 'MVP Development',    href: '/services/mvp-development',         desc: '0 → launched in 6–10 wk' },
-  { name: 'CRM Development',    href: '/services/crm-development',         desc: 'Custom pipelines' },
-  { name: 'WebSocket Systems',  href: '/services/websocket-development',   desc: 'Real-time everything' },
+  { name: 'Mobile Apps', href: '/services/mobile-app-development', desc: 'React Native, Expo' },
+  { name: 'API Development', href: '/services/api-development', desc: 'REST, GraphQL, Webhooks' },
+  { name: 'MVP Development', href: '/services/mvp-development', desc: '0 → launched in 6–10 wk' },
+  { name: 'CRM Development', href: '/services/crm-development', desc: 'Custom pipelines' },
+  { name: 'WebSocket Systems', href: '/services/websocket-development', desc: 'Real-time everything' },
 ];
 
 const WORK_PROJECTS = [
-  { name: 'Lead Gen Automation', industry: 'Real Estate', tech: 'n8n',    href: '/work/lead-gen-automation', gradient: 'linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%)' },
-  { name: 'SaaS Platform',       industry: 'Fintech',     tech: 'Next.js', href: '/work/saas-platform',       gradient: 'linear-gradient(135deg,#0a0a1a 0%,#002776 100%)' },
-  { name: 'AI Dashboard',        industry: 'Healthcare',  tech: 'Python',  href: '/work/ai-dashboard',        gradient: 'linear-gradient(135deg,#0d1b2a 0%,#0a3d62 100%)' },
+  { name: 'Lead Gen Automation', industry: 'Real Estate', tech: 'n8n', href: '/work/lead-gen-automation', gradient: 'linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%)' },
+  { name: 'SaaS Platform', industry: 'Fintech', tech: 'Next.js', href: '/work/saas-platform', gradient: 'linear-gradient(135deg,#0a0a1a 0%,#002776 100%)' },
+  { name: 'AI Dashboard', industry: 'Healthcare', tech: 'Python', href: '/work/ai-dashboard', gradient: 'linear-gradient(135deg,#0d1b2a 0%,#0a3d62 100%)' },
 ];
 
 const COMPANY_LINKS = [
-  { name: 'About Crosiz', href: '/about',          desc: 'Our team and mission' },
-  { name: 'Our Process',  href: '/about#process',  desc: 'How we work' },
-  { name: 'Technologies', href: '/technologies',    desc: 'Our tech stack' },
-  { name: 'Careers',      href: '/careers',         desc: 'Join the team' },
+  { name: 'About Crosiz', href: '/about', desc: 'Our team and mission' },
+  { name: 'Our Process', href: '/about#process', desc: 'How we work' },
+  { name: 'Technologies', href: '/technologies', desc: 'Our tech stack' },
+  { name: 'Careers', href: '/careers', desc: 'Join the team' },
 ];
 
 const COMPANY_LEARN = [
-  { name: 'Blog',       href: '/blog',              desc: 'Technical articles' },
-  { name: 'Resources',  href: '/resources',          desc: 'Free templates' },
-  { name: 'Industries', href: '/industries',         desc: 'Sectors we serve' },
+  { name: 'Blog', href: '/blog', desc: 'Technical articles' },
+  { name: 'Resources', href: '/resources', desc: 'Free templates' },
+  { name: 'Industries', href: '/industries', desc: 'Sectors we serve' },
 ];
 
 const RESOURCES = [
-  { name: 'Blog Articles',       href: '/blog' },
-  { name: 'Free Templates',      href: '/resources' },
+  { name: 'Blog Articles', href: '/blog' },
+  { name: 'Free Templates', href: '/resources' },
   { name: 'Guides & Checklists', href: '/resources#guides' },
 ];
 
@@ -149,7 +149,7 @@ function MobileAccordion({ title, children }: { title: string; children: React.R
 
 // ── Main Navbar ────────────────────────────────────────────────────────────────
 export function Navbar() {
-  const [scrolled, setScrolled]     = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
@@ -307,7 +307,7 @@ export function Navbar() {
                   <div className="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)] h-full flex flex-col justify-between">
                     <div>
                       <div className="w-10 h-10 rounded-xl bg-[var(--accent-dim)] flex items-center justify-center mb-4 text-[var(--accent)]">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
                       </div>
                       <h3 className="font-display font-semibold text-lg mb-2">Not sure where to start?</h3>
                       <p className="text-sm text-[var(--text-2)] leading-relaxed">
@@ -403,7 +403,7 @@ export function Navbar() {
                   <div className="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)] h-full flex flex-col justify-between">
                     <div>
                       <div className="w-10 h-10 rounded-xl bg-[var(--accent-dim)] flex items-center justify-center mb-4 text-[var(--accent)]">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>
                       </div>
                       <h3 className="font-display font-semibold text-lg mb-2">We&apos;re growing</h3>
                       <p className="text-sm text-[var(--text-2)] leading-relaxed">

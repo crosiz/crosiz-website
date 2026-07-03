@@ -26,9 +26,9 @@ function useCalendly() {
     // @ts-ignore
     if (typeof window !== 'undefined' && window.Calendly) {
       // @ts-ignore
-      window.Calendly.initPopupWidget({ url: 'https://calendly.com/crosiz/discovery' });
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/rafaykhan2k22/30min' });
     } else {
-      window.open('https://calendly.com/crosiz/discovery', '_blank');
+      window.open('https://calendly.com/rafaykhan2k22/30min', '_blank');
     }
   };
   return { openCalendly };

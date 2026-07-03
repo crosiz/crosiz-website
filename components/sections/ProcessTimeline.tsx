@@ -34,33 +34,33 @@ export function ProcessTimeline() {
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical center line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--border)] to-[var(--border)] -translate-x-1/2" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--border)] to-[var(--border)] md:-translate-x-1/2" />
 
           {STEPS.map((step, i) => {
             const isLeft = i % 2 === 0;
             return (
               <motion.div
                 key={step.num}
-                initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.55, ease: 'easeOut', delay: 0.05 }}
-                className={`relative flex items-center w-full mb-14 ${isLeft ? 'justify-start' : 'justify-end'}`}
+                className={`relative flex items-center w-full mb-10 md:mb-14 justify-end ${isLeft ? 'md:justify-start' : 'md:justify-end'}`}
               >
-                {/* Card — occupies 46% of width */}
-                <div className={`w-[46%] ${isLeft ? 'pr-10' : 'pl-10'}`}>
-                  <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--border-hover)] transition-colors duration-300 group">
+                {/* Card — occupies 46% of width on md, near full width on mobile */}
+                <div className={`w-[calc(100%-3.5rem)] md:w-[46%] ${isLeft ? 'md:pr-10 md:pl-0' : 'md:pl-10 md:pr-0'}`}>
+                  <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--border-hover)] transition-colors duration-300 group overflow-hidden">
                     {/* Step number */}
                     <span className="font-display font-extrabold text-3xl text-[var(--text-3)] leading-none block mb-4">
                       {step.num}
                     </span>
-                    <h3 className="text-lg font-display font-semibold text-[var(--text-1)] mb-2">{step.title}</h3>
-                    <p className="text-sm text-[var(--text-2)] leading-relaxed">{step.desc}</p>
+                    <h3 className="text-lg font-display font-semibold text-[var(--text-1)] mb-2 break-words">{step.title}</h3>
+                    <p className="text-sm text-[var(--text-2)] leading-relaxed break-words">{step.desc}</p>
                   </div>
                 </div>
 
                 {/* Center dot */}
-                <div className="absolute left-1/2 -translate-x-1/2 z-10 w-4 h-4 rounded-full bg-[var(--bg)] border-2 border-[var(--accent)] shadow-[0_0_12px_rgba(0,229,255,0.5)]" />
+                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-4 h-4 rounded-full bg-[var(--bg)] border-2 border-[var(--accent)] shadow-[0_0_12px_rgba(0,229,255,0.5)]" />
               </motion.div>
             );
           })}

@@ -65,7 +65,7 @@ export function WhyCrosiz() {
               key={reason.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className={`relative bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6
                 hover:border-[var(--accent)] hover:shadow-[0_0_24px_rgba(0,229,255,0.06)]

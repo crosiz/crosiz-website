@@ -61,7 +61,7 @@ export function BlogPreview() {
               key={post.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group bg-[var(--bg-card)] border border-[var(--border)] rounded-xl overflow-hidden hover:border-[var(--border-hover)] hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >

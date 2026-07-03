@@ -119,7 +119,7 @@ export function TechStackGrid() {
               key={group.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: gi * 0.07 }}
               className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--border-hover)] transition-all duration-300 group"
             >

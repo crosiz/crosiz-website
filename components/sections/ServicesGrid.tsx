@@ -16,6 +16,26 @@ const SERVICES = [
   { num: '10', title: 'WebSocket Systems', result: 'Real-time everything — chat, dashboards, feeds', tech: ['Socket.io', 'Redis', 'Node.js'], slug: 'websocket-development' },
 ];
 
+function ArrowIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+    </svg>
+  );
+}
+
 export function ServicesGrid() {
   return (
     <section className="py-32 bg-[var(--bg-2)] border-b border-[var(--border)]">
@@ -28,14 +48,14 @@ export function ServicesGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SERVICES.map((service) => (
-            <Link key={service.num} href={`/services/${service.slug}`} className="group">
-              <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-[8px] p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-hover)] flex flex-col">
+            <Link key={service.num} href={`/services/${service.slug}`} className="group min-w-0">
+              <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-[8px] p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-hover)] flex flex-col min-w-0 overflow-hidden">
                 <div className="flex justify-between items-start mb-6">
                   <span className="font-display text-4xl font-bold text-[var(--border)] group-hover:text-[var(--accent-glow)] transition-colors">
                     {service.num}
                   </span>
-                  <div className="w-10 h-10 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--text-2)] group-hover:bg-[var(--accent)] group-hover:text-black group-hover:border-[var(--accent)] transition-all">
-                    ↗
+                  <div className="w-10 h-10 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--text-2)] group-hover:bg-[var(--accent)] group-hover:text-black group-hover:border-[var(--accent)] transition-all shrink-0">
+                    <ArrowIcon />
                   </div>
                 </div>
                 

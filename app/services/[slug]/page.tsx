@@ -25,7 +25,86 @@ const SERVICES_DATA: Record<string, any> = {
       { title: 'Integration', desc: 'Connecting the automation seamlessly into your existing tools.' }
     ]
   },
-  // Adding a fallback for others to avoid boilerplate
+  'backend-development': {
+    title: 'Backend Systems',
+    desc: 'High-performance APIs, microservices, and data pipelines built for scale and reliability.',
+    tech: ['Node.js', 'PostgreSQL', 'Redis', 'NestJS', 'FastAPI'],
+    process: [
+      { title: 'Database Design', desc: 'Structuring data for efficient querying and scalability.' },
+      { title: 'API Development', desc: 'Building secure and performant REST or GraphQL endpoints.' },
+      { title: 'Optimization', desc: 'Implementing caching and performance improvements.' }
+    ]
+  },
+  'system-design': {
+    title: 'System Design',
+    desc: 'Architecture review, design sprints, and scalability planning before you write a line of code.',
+    tech: ['AWS', 'Docker', 'Kubernetes', 'Architecture', 'Cloud'],
+    process: [
+      { title: 'Requirements Gathering', desc: 'Understanding business needs and technical constraints.' },
+      { title: 'Architecture Mapping', desc: 'Designing the high-level system components and interactions.' },
+      { title: 'Scalability Planning', desc: 'Ensuring the system can handle future growth.' }
+    ]
+  },
+  'devops': {
+    title: 'DevOps & CI/CD',
+    desc: 'Docker, Kubernetes, GitHub Actions, and zero-downtime deployments. Ship faster with confidence.',
+    tech: ['GitHub Actions', 'Vercel', 'Linux', 'Kubernetes', 'Docker'],
+    process: [
+      { title: 'Infrastructure Setup', desc: 'Provisioning servers and cloud resources securely.' },
+      { title: 'Pipeline Creation', desc: 'Automating testing and deployment workflows.' },
+      { title: 'Monitoring', desc: 'Setting up alerts and logging for system health.' }
+    ]
+  },
+  'mobile-app-development': {
+    title: 'Mobile Applications',
+    desc: 'Cross-platform iOS and Android apps built with React Native. Native performance, shared codebase.',
+    tech: ['React Native', 'Expo', 'Swift', 'iOS', 'Android'],
+    process: [
+      { title: 'UI/UX Design', desc: 'Crafting intuitive mobile experiences.' },
+      { title: 'App Development', desc: 'Building the application using cross-platform frameworks.' },
+      { title: 'App Store Launch', desc: 'Handling submission and approval processes.' }
+    ]
+  },
+  'api-development': {
+    title: 'API Development',
+    desc: 'RESTful and GraphQL APIs, third-party integrations, and webhook systems built for developer experience.',
+    tech: ['REST', 'GraphQL', 'FastAPI', 'Node.js'],
+    process: [
+      { title: 'API Design', desc: 'Defining endpoints, methods, and data structures.' },
+      { title: 'Implementation', desc: 'Coding the logic with proper authentication.' },
+      { title: 'Documentation', desc: 'Providing clear guides for developers.' }
+    ]
+  },
+  'mvp-development': {
+    title: 'MVP Development',
+    desc: 'Got an idea? We validate, design, and ship your MVP in 6–10 weeks. Lean scope, real code.',
+    tech: ['Supabase', 'Next.js', 'Vercel', 'Full-stack'],
+    process: [
+      { title: 'Scope Definition', desc: 'Identifying core features for the initial release.' },
+      { title: 'Rapid Prototyping', desc: 'Building out functionality quickly.' },
+      { title: 'Beta Launch', desc: 'Releasing to early users for feedback.' }
+    ]
+  },
+  'crm-development': {
+    title: 'CRM Development',
+    desc: 'Custom CRM systems built around your actual sales workflow. Complete ownership, no vendor lock-in.',
+    tech: ['Prisma', 'PostgreSQL', 'React', 'Node.js'],
+    process: [
+      { title: 'Workflow Analysis', desc: 'Mapping out your specific sales and customer processes.' },
+      { title: 'Custom Development', desc: 'Building features tailored to your needs.' },
+      { title: 'Data Migration', desc: 'Moving existing customer data to the new system.' }
+    ]
+  },
+  'websocket-development': {
+    title: 'WebSocket Systems',
+    desc: 'Real-time chat, live dashboards, collaborative tools, and notification systems.',
+    tech: ['Socket.io', 'Redis', 'Node.js', 'Real-time'],
+    process: [
+      { title: 'Event Planning', desc: 'Defining the real-time events and data flow.' },
+      { title: 'WebSocket Integration', desc: 'Setting up bidirectional communication.' },
+      { title: 'Load Testing', desc: 'Ensuring the system handles concurrent connections.' }
+    ]
+  }
 };
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
